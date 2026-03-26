@@ -1,6 +1,6 @@
 # Hi, I'm Aina Nadal 👋
 
-Mathematician & Computer Scientist specialized in AI and data analysis.
+Machine Learning & AI Engineer.
 
 ---
 
