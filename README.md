@@ -6,6 +6,43 @@ Machine Learning & AI Engineer.
 
 ## Projects
 
+### ⚙️ MLOps Churn Pipeline
+**End-to-end MLOps pipeline for customer churn prediction**
+
+Demonstrates production-grade ML practices: data versioning with DVC, remote experiment tracking on DagsHub, CI-driven model comparison on every PR, MLflow Model Registry lifecycle (Staging → Production), and Docker packaging.
+
+Every pull request automatically trains a candidate model on new data (v2) and a baseline on the original data (v1), compares both, and posts a validation report with metric deltas and a BETTER / WORSE verdict as a PR comment.
+
+```mermaid
+flowchart LR
+    A[v1 data] --> B[Train & register\nProduction]
+    B --> C[Data drifts\nv2 arrives]
+    C --> D[Open PR]
+    D --> E[CI trains candidate\nv2 → Staging]
+    D --> F[CI trains baseline\nv1 from main]
+    E --> G[compare.py\nBETTER / WORSE]
+    F --> G
+    G --> H[PR comment\n+ Docker image]
+    H --> I[Merge → Production]
+```
+
+<p align="center">
+  <img width="400" src="https://raw.githubusercontent.com/ANadalCardenas/mlops-churn-pipeline/main/images/model_versions.png" alt="Model versions in DagsHub" />
+  <img width="400" src="https://raw.githubusercontent.com/ANadalCardenas/mlops-churn-pipeline/main/images/artifacts.png" alt="MLflow artifacts" />
+</p>
+
+<p align="center">
+  <img width="280" src="https://raw.githubusercontent.com/ANadalCardenas/mlops-churn-pipeline/main/images/confusion_matrix.png" alt="Confusion matrix" />
+  <img width="280" src="https://raw.githubusercontent.com/ANadalCardenas/mlops-churn-pipeline/main/images/roc_curve.png" alt="ROC curve" />
+  <img width="280" src="https://raw.githubusercontent.com/ANadalCardenas/mlops-churn-pipeline/main/images/precision_recall_curve.png" alt="Precision-recall curve" />
+</p>
+
+**Stack:** Python · scikit-learn · MLflow · DVC · GitHub Actions · Docker · Cloudflare R2 · DagsHub
+
+🔗 [View repository](https://github.com/ANadalCardenas/mlops-churn-pipeline) · [MLflow UI](https://dagshub.com/ANadalCardenas/mlops-churn-pipeline.mlflow) · [Showcase PR](https://github.com/ANadalCardenas/mlops-churn-pipeline/pull/4)
+
+---
+
 ### 🛡️ Drowsiness Detection
 **Real-time driver drowsiness detection using YOLOv5**
 
