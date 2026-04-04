@@ -1,6 +1,6 @@
 # Hi, I'm Aina Nadal 👋
 
-Machine Learning & AI Engineer.
+Senior Machine Learning & AI Engineer.
 
 ---
 
@@ -9,9 +9,9 @@ Machine Learning & AI Engineer.
 ### ⚙️ MLOps Churn Pipeline
 **End-to-end MLOps pipeline for customer churn prediction**
 
-Demonstrates production-grade ML practices: data versioning with DVC, remote experiment tracking on DagsHub, CI-driven model comparison on every PR, MLflow Model Registry lifecycle (Staging → Production), and Docker packaging.
+A telecom company wants to predict which customers will churn. That is a standard ML problem. The harder problem is what happens after the first model is deployed: data evolves, models degrade silently, and teams need a reliable way to know whether a code change makes the model better or worse before it reaches production.
 
-Every pull request automatically trains a candidate model on new data (v2) and a baseline on the original data (v1), compares both, and posts a validation report with metric deltas and a BETTER / WORSE verdict as a PR comment.
+This project builds the infrastructure that answers those questions automatically, on every pull request.
 
 ```mermaid
 flowchart LR
