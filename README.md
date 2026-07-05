@@ -63,7 +63,7 @@ flowchart LR
 
 **Stack:** Python · scikit-learn · MLflow · DVC · GitHub Actions · Docker · Cloudflare R2 · DagsHub
 
-🔗 [View repository](https://github.com/ANadalCardenas/mlops-churn-pipeline) · [Showcase PR](https://github.com/ANadalCardenas/mlops-churn-pipeline/pull/4)
+🔗 [View repository](https://github.com/ANadalCardenas/mlops-churn-pipeline) · [Showcase PR](https://github.com/ANadalCardenas/mlops-churn-pipeline/pull/7)
 
 ---
 
