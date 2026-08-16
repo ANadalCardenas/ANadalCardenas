@@ -7,26 +7,34 @@ AI & Machine Learning Engineer.
 ## Projects
 
 
-### 🎙️ English Conversational Teacher
-**AI-powered voice-based English practice assistant**
+### 🤖 Multi-Agent Customer Support
+**Multi-agent LangGraph system for automated customer support**
 
-An interactive web application that helps users practice English through voice conversation. Provides instant sentence corrections, grammar explanations, context-aware follow-up questions, and a final learning summary.
+A cultural experiences subscription app needs to handle support tickets — login issues, subscription changes, reservations, general questions — without a human reading every single one. This project builds that system: a supervisor agent reads each ticket and routes it to one of four specialized agents (account, subscription, reservations, knowledge base), each with its own tools and access to the right data. Agents resolve what they can and escalate to a human when they can't, with short and long-term memory, RAG-based knowledge search, and structured logging of every decision along the way.
 
-<p align="center">
-  <img width="653" height="303" alt="Conversation view" src="https://github.com/user-attachments/assets/26a4e72c-e159-4a56-bf63-0edaea0081a2" />
-</p>
+```mermaid
+flowchart TD
+    Ticket([Ticket]) --> Supervisor
 
-<p align="center">
-  <img width="648" height="680" alt="Sentence feedback" src="https://github.com/user-attachments/assets/170aa296-c1c6-4706-982a-9eef92d37a1e" />
-</p>
+    Supervisor --> Account[Account and Access]
+    Supervisor --> Subscription[Subscription and Billing]
+    Supervisor --> Reservation[Reservations and Events]
+    Supervisor --> Knowledge[Knowledge and General Support]
 
-<p align="center">
-  <img width="633" height="738" alt="Session summary" src="https://github.com/user-attachments/assets/04462fc1-d9d6-486a-ba3b-bab39c74c2a2" />
-</p>
+    Account --> Supervisor
+    Subscription --> Supervisor
+    Reservation --> Supervisor
+    Knowledge --> Supervisor
 
-**Stack:** FastAPI · OpenAI GPT · Whisper · Docker · Nginx
+    Supervisor --> Escalated[Escalated]
+    Supervisor --> Finished[Finished]
+    Escalated --> Finished
+    Finished --> End([END])
+```
 
-🔗 [View repository](https://github.com/ANadalCardenas/conversational_teacher_agent)
+**Stack:** LangGraph · LangChain · OpenAI · FastMCP · SQLAlchemy · scikit-learn · pytest · Docker
+
+🔗 [View repository](https://github.com/ANadalCardenas/multi-agent-customer-support)
 
 ---
 
@@ -64,6 +72,29 @@ flowchart LR
 **Stack:** Python · scikit-learn · MLflow · DVC · GitHub Actions · Docker · Cloudflare R2 · DagsHub
 
 🔗 [View repository](https://github.com/ANadalCardenas/mlops-churn-pipeline) · [Showcase PR](https://github.com/ANadalCardenas/mlops-churn-pipeline/pull/7)
+
+---
+
+### 🎙️ English Conversational Teacher
+**AI-powered voice-based English practice assistant**
+
+An interactive web application that helps users practice English through voice conversation. Provides instant sentence corrections, grammar explanations, context-aware follow-up questions, and a final learning summary.
+
+<p align="center">
+  <img width="653" height="303" alt="Conversation view" src="https://github.com/user-attachments/assets/26a4e72c-e159-4a56-bf63-0edaea0081a2" />
+</p>
+
+<p align="center">
+  <img width="648" height="680" alt="Sentence feedback" src="https://github.com/user-attachments/assets/170aa296-c1c6-4706-982a-9eef92d37a1e" />
+</p>
+
+<p align="center">
+  <img width="633" height="738" alt="Session summary" src="https://github.com/user-attachments/assets/04462fc1-d9d6-486a-ba3b-bab39c74c2a2" />
+</p>
+
+**Stack:** FastAPI · OpenAI GPT · Whisper · Docker · Nginx
+
+🔗 [View repository](https://github.com/ANadalCardenas/conversational_teacher_agent)
 
 ---
 
