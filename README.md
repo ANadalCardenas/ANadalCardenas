@@ -10,7 +10,7 @@ AI & Machine Learning Engineer.
 ### 🤖 Multi-Agent Customer Support
 **Multi-agent LangGraph system for automated customer support**
 
-A cultural experiences subscription app needs to handle support tickets — login issues, subscription changes, reservations, general questions — without a human reading every single one. This project builds that system: a supervisor agent reads each ticket and routes it to one of four specialized agents (account, subscription, reservations, knowledge base), each with its own tools and access to the right data. Agents resolve what they can and escalate to a human when they can't, with short and long-term memory, RAG-based knowledge search, and structured logging of every decision along the way.
+A cultural experiences subscription app needs to handle support tickets, login issues, subscription changes, reservations, general questions, without a human reading every single one. This project builds that system: a supervisor agent reads each ticket and routes it to one of four specialized agents (account, subscription, reservations, knowledge base), each with its own tools and access to the right data. Agents resolve what they can and escalate to a human when they can't, with short and long-term memory, RAG-based knowledge search, and structured logging of every decision along the way.
 
 ```mermaid
 flowchart TD
