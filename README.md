@@ -1,6 +1,6 @@
 # Hi, I'm Aina Nadal 👋
 
-AI & Machine Learning Engineer.
+AI & Machine Learning Engineer and Mathematician.
 
 ---
 
